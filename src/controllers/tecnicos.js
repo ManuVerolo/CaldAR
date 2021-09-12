@@ -82,11 +82,40 @@ const deleteTecnicoById = async (req, res) => {
     }
 }
 
+const updateTecnicoById = async (req, res) => {
+    try {
+        const tecnico = await tecnicosSchema.findById({ _id: req.body.tecnico })
+        if(!response || response.length === 0){
+            return res.status(404).json({
+                error: true,
+                msg: 'No existe el tecnico'
+            })
+        }
+
+        const response = await tecnicosSchema.findByIdAndUpdate(req.params.id, req.body, {new: true, });
+        if (!response) {
+            return res.status(400).json({
+                error: true,
+                msg: 'Error al actualizar el tecnico',
+            });
+        }
+
+        return res.status(200).json(reseponse);
+    } catch (error) {
+        return res.status(400).json({
+            error: true,
+            msg: error,
+        });
+    }
+}
+
+
 module.exports = {
     getTecnicos,
     addTecnico,
     deleteTecnicoById,
-    getTecnicoById
+    getTecnicoById,
+    updateTecnicoById
 }
 
 /*exports.findAllTecnicos = (req, res) => {
