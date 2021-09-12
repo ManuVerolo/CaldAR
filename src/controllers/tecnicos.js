@@ -36,7 +36,7 @@ const addTecnico =  async (req, res) => {
 
 const getTecnicoById = async (req, res) => {
     try{
-        const response = await tecnicosSchema.findOne({ _id: req.params.tenicoId })
+        const response = await tecnicosSchema.findOne({ _id: req.params.id })
 
         if(!response || response.length === 0){
             return res.status(404).json({
@@ -100,7 +100,7 @@ const updateTecnicoById = async (req, res) => {
             });
         }
 
-        return res.status(200).json(reseponse);
+        return res.status(200).json(response);
     } catch (error) {
         return res.status(400).json({
             error: true,
@@ -118,23 +118,3 @@ module.exports = {
     updateTecnicoById
 }
 
-/*exports.findAllTecnicos = (req, res) => {
-    const tecnicos = fs.readFileSync(dataTecnicos);
-    return JSON.parse(tecnicos);
-}
-
-exports.createTecnico = () => {
-    console.log('create tecnico');
-}
-
-exports.updateTecnico = () => {
-    console.log('update tecnico');
-}
-
-exports.deleteTecnico = ()  => {
-    console.log('delete tecnico');
-}
-
-exports.findOneTecnico = () => {
-    console.log('find one tecnico');
-}*/
