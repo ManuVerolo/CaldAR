@@ -41,14 +41,14 @@ const getTecnicoById = async (req, res) => {
         if(!response || response.length === 0){
             return res.status(404).json({
                 error: true,
-                msg: 'No existe el usuario'
+                msg: 'No existe el tecnico'
             })
         }
 
         return res.status(200).json({
             data: response,
             error: false,
-            msg: 'Usuario encontrado con éxito'
+            msg: 'Tecnico encontrado con éxito'
         })
     }catch(error){
         return res.status(400).json({
@@ -65,14 +65,14 @@ const deleteTecnicoById = async (req, res) => {
         if(!response || response.length === 0){
             return res.status(404).json({
                 error: true,
-                msg: 'No existe el usuario'
+                msg: 'No existe el tecnico'
             })
         }
 
         return res.status(200).json({
             data: response,
             error: false,
-            msg: 'Usuario eliminado con éxito'
+            msg: 'Tecnico eliminado con éxito'
         })
     }catch(error){
         return res.status(400).json({

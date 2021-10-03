@@ -12,7 +12,7 @@ app.listen(port, () => {
 })
 
 mongoose.connect('mongodb+srv://grupomcga:grupo123@cluster0.doeq5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority').then((result) => {
-    console.log('Conexion lista')
+    console.log('Conexion exitosa con la base de datos')
 }).catch((error) => {
     console.log(`Error en la conexion, error:  ${error}`)
 })
