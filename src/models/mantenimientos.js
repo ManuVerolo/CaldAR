@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const mantenimientosSchema = new mongoose.Schema({
     name: String,
@@ -6,4 +6,4 @@ const mantenimientosSchema = new mongoose.Schema({
     time:Date,
 });
 
-module.exports = mongoose.model('Mantenimientos', mantenimientosSchema);
+module.exports = mongoose.model("Mantenimientos", mantenimientosSchema);
