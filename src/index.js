@@ -2,9 +2,11 @@ const express = require('express');
 const router = require('./routes');
 const mongoose = require('mongoose');
 
+
 const port = 3000
 const app = express()
 
+app.use(express.json());            // Permite obtener el cuerpo del POST atravez del req.body
 app.use('/', router);
 
 app.listen(port, () => {

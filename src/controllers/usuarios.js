@@ -22,7 +22,7 @@ const addUsuario =  async (req, res) => {
         const newUsuario = await usuario.save()
 
         return res.status(200).json({
-            data: newUsuario,
+           data: newUsuario,
             error: false,
             msg: 'Usuario creado correctamente'
         })
@@ -33,6 +33,22 @@ const addUsuario =  async (req, res) => {
         })
     }
 }
+
+//const addUsuario = async(req, res) =>{
+//    const usuario = new usuariosSchema({
+//        name: req.body.name,
+//        last_name: req.body.last_name,
+//        email: req.body.email,
+//        active: req.body.active,
+//        cargo: req.body.cargo
+//    });
+//    try{
+//        const newUsuario = await usuario.save();
+//        res.json(newUsuario);
+//    } catch (error){
+//        res.json({message: "error"})
+//    }
+//}
 
 const getUsuarioById = async (req, res) => {
     try{
