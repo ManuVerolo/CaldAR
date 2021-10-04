@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const edificiosSchema = new mongoose.Schema({
     nombre: String,
@@ -13,4 +13,4 @@ const edificiosSchema = new mongoose.Schema({
     }]
 });
 
-module.exports = mongoose.model('Edificios', calderasSchema);
+module.exports = mongoose.model("Edificios", calderasSchema);

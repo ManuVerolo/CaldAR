@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
 
 const mantenimientosSchema = new mongoose.Schema({
-    name: String,
+    name: {
+        type: String,
+        required: [true, "Name is required"]
+    },
     description: String,
     time:Date,
 });

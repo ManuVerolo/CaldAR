@@ -1,8 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const constructorasSchema = new mongoose.Schema({
-    name: String,
+    name: {
+        type: String,
+        required: [true, "Name is required"]
+    },  
+
+    
     description: String,
 });
 
-module.exports = mongoose.model('Constructoras',constructorasSchema);
+module.exports = mongoose.model("Constructoras",constructorasSchema);

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const tecnicosSchema = new mongoose.Schema({
     name: String,
@@ -7,4 +7,4 @@ const tecnicosSchema = new mongoose.Schema({
     active: Boolean,
 });
 
-module.exports = mongoose.model('Tecnicos', tecnicosSchema);
+module.exports = mongoose.model("Tecnicos", tecnicosSchema);

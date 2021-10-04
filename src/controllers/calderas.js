@@ -1,20 +1,20 @@
-const calderasSchema = require('../../src/models/Calderas')
+const calderasSchema = require("../../src/models/Calderas");
 
 const getCalderas = async (req, res) => {
     try{
-        const response = await calderasSchema.find()
+        const response = await calderasSchema.find();
         return res.status(200).json({
             data: response,
             error: false,
-            msg: 'Información calderas exitosa'
-        })
+            msg: "Información calderas exitosa"
+        });
     }catch(error){
         return res.status(400).json({
             error: true,
             msg: error
-        })
+        });
     }
-}
+};
 
 const addCaldera =  async (req, res) => {
     try{

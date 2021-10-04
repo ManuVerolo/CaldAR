@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const usuariosSchema = new mongoose.Schema({
     name: String,
@@ -8,4 +8,4 @@ const usuariosSchema = new mongoose.Schema({
     cargo: String,
 });
 
-module.exports = mongoose.model('Usuarios', tecnicosSchema);
+module.exports = mongoose.model("Usuarios", tecnicosSchema);
